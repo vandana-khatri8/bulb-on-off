@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{
+            height: 100%;
+            width: 100%;
+   }
+        .bulb{
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border:4px solid black;
+        }
+        button{
+           
+            background-color: aqua;
+            border-radius: 15px;
+            font-size: 20px;
+            margin: 50px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bulb">
+
+    </div>
+   <div> <button>on</button></div>
+
+
+   <script>
+
+var bulb =document.querySelector(".bulb")
+var btn = document.querySelector("button")
+var flag = 0
+btn.addEventListener("click",function(){
+    if (flag == 0){
+    bulb.style.backgroundColor="yellow"
+    console.log("clickoid")
+     flag = 1 }
+     else{
+        bulb.style.backgroundColor="transparent";
+        console.log("again clicked")
+        flag = 0 
+     }
+})
+
+   </script>
+</body>
+</html>
